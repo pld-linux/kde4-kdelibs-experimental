@@ -43,14 +43,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This package includes experimental libraries for KDE.
 
 %package devel
-Summary:	kdelibs - header files and development documentation
-Summary(pl.UTF-8):	kdelibs - pliki nagłówkowe i dokumentacja do kdelibs
+Summary:	kdelibs-experimental - header files and development documentation
+Summary(pl.UTF-8):	kdelibs-experimental - pliki nagłówkowe i dokumentacja do kdelibs
 Summary(pt_BR.UTF-8):	Arquivos de inclusão e documentação para compilar aplicativos KDE
 Summary(ru.UTF-8):	Хедеры и документация для компилляции программ KDE
 Summary(uk.UTF-8):	Хедери та документація для компіляції програм KDE
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	%{name}-libs = %{version}-%{release}
 Requires:	acl-devel
 Requires:	fam-devel
 Requires:	libart_lgpl-devel
@@ -63,11 +62,11 @@ Requires:	xorg-lib-libXt-devel
 
 %description devel
 This package contains header files and development documentation for
-kdelibs.
+kdelibs-experimental.
 
 %description devel -l pl.UTF-8
 Pakiet ten zawiera pliki nagłówkowe i dokumentację potrzebną przy
-pisaniu własnych programów wykorzystujących kdelibs.
+pisaniu własnych programów wykorzystujących kdelibs-experimental.
 
 %description devel -l pt_BR.UTF-8
 Este pacote contém os arquivos de inclusão que são necessários para
