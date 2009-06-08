@@ -1,6 +1,6 @@
 %define		_state		unstable
 %define		orgname		kdelibs-experimental
-%define		qtver		4.5.0
+%define		qtver		4.5.1
 %define		svn		973768
 
 Summary:	K Desktop Environment - experimental libraries
@@ -11,12 +11,13 @@ Summary(pt_BR.UTF-8):	Bibliotecas de fundação do KDE
 Summary(ru.UTF-8):	K Desktop Environment - Библиотеки
 Summary(uk.UTF-8):	K Desktop Environment - Бібліотеки
 Name:		kde4-kdelibs-experimental
-Version:	4.2.88
+Version:	4.2.90
 Release:	1
 License:	LGPL
 Group:		X11/Libraries
-Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}svn%{svn}.tar.bz2
-# Source0-md5:	3cefa91d030ee0b2c3a7cf0de4ecce55
+#Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}svn%{svn}.tar.bz2
+Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.bz2
+# Source0-md5:	d484c2080b835e06f2793858a8e68e58
 URL:		http://www.kde.org/
 BuildRequires:	OpenEXR-devel >= 1.2.2
 BuildRequires:	Qt3Support-devel >= %{qtver}
@@ -80,7 +81,8 @@ KDE.
 Цей пакет містить хедери, необхідні для компіляції програм для KDE.
 
 %prep
-%setup -q -n %{orgname}-%{version}svn%{svn}
+%setup -q -n %{orgname}-%{version}
+#%setup -q -n %{orgname}-%{version}svn%{svn}
 
 %build
 install -d build
