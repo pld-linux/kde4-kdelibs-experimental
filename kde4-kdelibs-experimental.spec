@@ -1,7 +1,7 @@
 %define		_state		unstable
 %define		orgname		kdelibs-experimental
 %define		qtver		4.5.1
-%define		svn		973768
+%define		svn		979380
 
 Summary:	K Desktop Environment - experimental libraries
 Summary(es.UTF-8):	K Desktop Environment - bibliotecas
@@ -11,13 +11,13 @@ Summary(pt_BR.UTF-8):	Bibliotecas de fundação do KDE
 Summary(ru.UTF-8):	K Desktop Environment - Библиотеки
 Summary(uk.UTF-8):	K Desktop Environment - Бібліотеки
 Name:		kde4-kdelibs-experimental
-Version:	4.2.90
+Version:	4.2.91
 Release:	1
 License:	LGPL
 Group:		X11/Libraries
-#Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}svn%{svn}.tar.bz2
-Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.bz2
-# Source0-md5:	d484c2080b835e06f2793858a8e68e58
+Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}svn%{svn}.tar.bz2
+# Source0-md5:	35da81a3fadf73508fe458400f71014f
+#Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.bz2
 URL:		http://www.kde.org/
 BuildRequires:	OpenEXR-devel >= 1.2.2
 BuildRequires:	Qt3Support-devel >= %{qtver}
@@ -81,8 +81,8 @@ KDE.
 Цей пакет містить хедери, необхідні для компіляції програм для KDE.
 
 %prep
-%setup -q -n %{orgname}-%{version}
-#%setup -q -n %{orgname}-%{version}svn%{svn}
+##%setup -q -n %{orgname}-%{version}
+%setup -q -n %{orgname}-%{version}svn%{svn}
 
 %build
 install -d build
@@ -122,10 +122,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libknotificationitem-1.so
+%attr(755,root,root) %ghost %{_libdir}/libknotificationitem-1.so.?
+%attr(755,root,root) %{_libdir}/libknotificationitem-1.so.*.*.*
 %{_datadir}/dbus-1/interfaces/org.kde.NotificationItem*.xml
 
 %files devel
 %defattr(644,root,root,755)
 %dir %{_includedir}/knotificationitem-1
+%attr(755,root,root) %{_libdir}/libknotificationitem-1.so
 %{_includedir}/knotificationitem-1/*
