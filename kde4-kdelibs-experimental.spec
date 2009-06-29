@@ -11,12 +11,13 @@ Summary(pt_BR.UTF-8):	Bibliotecas de fundação do KDE
 Summary(ru.UTF-8):	K Desktop Environment - Библиотеки
 Summary(uk.UTF-8):	K Desktop Environment - Бібліотеки
 Name:		kde4-kdelibs-experimental
-Version:	4.2.91
+Version:	4.2.95
 Release:	1
 License:	LGPL
 Group:		X11/Libraries
-Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}svn%{svn}.tar.bz2
-# Source0-md5:	35da81a3fadf73508fe458400f71014f
+#Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}svn%{svn}.tar.bz2
+Source0:	http://shadzik.nomeno.pl/kde4/unstable/%{orgname}-%{version}.tar.bz2
+# Source0-md5:	599a2503112c15fd638634b2059c44c0
 #Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.bz2
 URL:		http://www.kde.org/
 BuildRequires:	OpenEXR-devel >= 1.2.2
@@ -31,7 +32,7 @@ BuildRequires:	QtTest-devel >= %{qtver}
 BuildRequires:	QtUiTools-devel >= %{qtver}
 BuildRequires:	QtWebKit-devel >= %{qtver}
 BuildRequires:	QtXml-devel >= %{qtver}
-BuildRequires:	kde4-kdelibs-devel = %{version}
+BuildRequires:	kde4-kdelibs-devel >= %{version}
 BuildRequires:	rpmbuild(macros) >= 1.293
 Requires:	QtCore >= %{qtver}
 Requires:	kde-common-dirs >= 0.3
@@ -81,8 +82,8 @@ KDE.
 Цей пакет містить хедери, необхідні для компіляції програм для KDE.
 
 %prep
-##%setup -q -n %{orgname}-%{version}
-%setup -q -n %{orgname}-%{version}svn%{svn}
+%setup -q -n %{orgname}-%{version}
+##%setup -q -n %{orgname}-%{version}svn%{svn}
 
 %build
 install -d build
