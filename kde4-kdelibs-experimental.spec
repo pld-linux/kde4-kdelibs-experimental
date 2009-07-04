@@ -83,7 +83,6 @@ KDE.
 
 %prep
 %setup -q -n %{orgname}-%{version}
-##%setup -q -n %{orgname}-%{version}svn%{svn}
 
 %build
 install -d build
