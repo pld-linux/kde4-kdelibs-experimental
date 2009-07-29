@@ -1,4 +1,4 @@
-%define		_state		unstable
+%define		_state		stable
 %define		orgname		kdelibs-experimental
 %define		qtver		4.5.2
 
