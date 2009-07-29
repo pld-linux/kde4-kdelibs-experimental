@@ -1,7 +1,6 @@
 %define		_state		unstable
 %define		orgname		kdelibs-experimental
 %define		qtver		4.5.2
-%define		svn		979380
 
 Summary:	K Desktop Environment - experimental libraries
 Summary(es.UTF-8):	K Desktop Environment - bibliotecas
@@ -11,13 +10,12 @@ Summary(pt_BR.UTF-8):	Bibliotecas de fundação do KDE
 Summary(ru.UTF-8):	K Desktop Environment - Библиотеки
 Summary(uk.UTF-8):	K Desktop Environment - Бібліотеки
 Name:		kde4-kdelibs-experimental
-Version:	4.2.98
+Version:	4.3.0
 Release:	1
 License:	LGPL
 Group:		X11/Libraries
-#Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}svn%{svn}.tar.bz2
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.bz2
-# Source0-md5:	f651465791384cbf8c8928a47d7323e1
+# Source0-md5:	9b3ed689f4f357d4fc059cf9dd41e035
 URL:		http://www.kde.org/
 BuildRequires:	OpenEXR-devel >= 1.2.2
 BuildRequires:	Qt3Support-devel >= %{qtver}
