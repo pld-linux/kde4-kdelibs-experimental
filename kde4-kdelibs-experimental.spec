@@ -1,5 +1,5 @@
 %define		_state		unstable
-%define		snap		svn1013471	
+%define		snap		svn1027298
 %define		orgname		kdelibs-experimental
 %define		qtver		4.5.2
 
@@ -11,12 +11,12 @@ Summary(pt_BR.UTF-8):	Bibliotecas de fundação do KDE
 Summary(ru.UTF-8):	K Desktop Environment - Библиотеки
 Summary(uk.UTF-8):	K Desktop Environment - Бібліотеки
 Name:		kde4-kdelibs-experimental
-Version:	4.3.65
-Release:	1
+Version:	4.3.69
+Release:	0.1
 License:	LGPL
 Group:		X11/Libraries
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}%{snap}.tar.bz2
-# Source0-md5:	1dbe98886cf76bdc5ea0a1d93beca5e5
+# Source0-md5:	02df9b8f0d48e895b7b7cf2cc29a749b
 URL:		http://www.kde.org/
 BuildRequires:	OpenEXR-devel >= 1.2.2
 BuildRequires:	Qt3Support-devel >= %{qtver}
