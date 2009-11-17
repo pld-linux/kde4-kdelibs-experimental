@@ -29,7 +29,11 @@ BuildRequires:	QtTest-devel >= %{qtver}
 BuildRequires:	QtUiTools-devel >= %{qtver}
 BuildRequires:	QtWebKit-devel >= %{qtver}
 BuildRequires:	QtXml-devel >= %{qtver}
+BuildRequires:	automoc4
+BuildRequires:	cmake
 BuildRequires:	kde4-kdelibs-devel >= %{version}
+BuildRequires:	qt4-build
+BuildRequires:	qt4-qmake
 BuildRequires:	rpmbuild(macros) >= 1.293
 Requires:	QtCore >= %{qtver}
 Requires:	kde-common-dirs >= 0.3
